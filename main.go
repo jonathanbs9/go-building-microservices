@@ -22,7 +22,7 @@ func main() {
 
 	// ServeMux
 	sm := http.NewServeMux()
-	//sm.Handle("/", hh)
+	sm.Handle("/", ph)
 	//sm.Handle("/goodbye", gh)
 	sm.Handle("/products", ph)
 
@@ -50,7 +50,7 @@ func main() {
 
 	// Block until signal is received
 	sig := <-c
-	log.Println("Got signal! => ", sig)
+	l.Println("Got signal! => ", sig)
 
 	ctx, _ := context.WithTimeout(context.Background(), 30*time.Second)
 	s.Shutdown(ctx)
