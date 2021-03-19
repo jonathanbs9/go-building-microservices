@@ -3,19 +3,13 @@ module github.com/jonathanbs9/go-building-microservices
 go 1.16
 
 require (
-	github.com/asaskevich/govalidator v0.0.0-20210307081110-f21760c49a8d // indirect
-	github.com/go-openapi/errors v0.20.0 // indirect
-	github.com/go-openapi/validate v0.20.2 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
-	github.com/go-playground/validator v9.31.0+incompatible // indirect
-	github.com/go-swagger/go-swagger v0.26.1 // indirect
+	github.com/go-playground/validator v9.31.0+incompatible
+	github.com/gorilla/handlers v1.5.1 // indirect
 	github.com/gorilla/mux v1.8.0
 	github.com/leodido/go-urn v1.2.1 // indirect
-	github.com/mailru/easyjson v0.7.7 // indirect
-	github.com/spf13/afero v1.5.1 // indirect
-	go.mongodb.org/mongo-driver v1.5.0 // indirect
-	golang.org/x/mod v0.4.2 // indirect
-	golang.org/x/net v0.0.0-20210315170653-34ac3e1c2000 // indirect
-	golang.org/x/sys v0.0.0-20210315160823-c6e025ad8005 // indirect
-	golang.org/x/tools v0.1.0 // indirect
+	github.com/stretchr/testify v1.7.0 // indirect
+	gopkg.in/go-playground/assert.v1 v1.2.1 // indirect
+	gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b // indirect
 )
