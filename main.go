@@ -10,6 +10,7 @@ import (
 
 	"github.com/jonathanbs9/go-building-microservices/handlers"
 
+	gohandlers "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 )
 
@@ -45,6 +46,9 @@ func main() {
 	postRouter := sm.Methods(http.MethodPost).Subrouter()
 	postRouter.HandleFunc("/products", ph.AddProduct)
 	postRouter.Use(ph.MiddleWareProductValidation)
+
+	// CORS
+	gohandlers.CORS(gohandlers.AllowedOrigins())
 
 	// Server
 	s := &http.Server{
