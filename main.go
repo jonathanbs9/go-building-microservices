@@ -48,12 +48,12 @@ func main() {
 	postRouter.Use(ph.MiddleWareProductValidation)
 
 	// CORS
-	gohandlers.CORS(gohandlers.AllowedOrigins())
+	ch := gohandlers.CORS(gohandlers.AllowedOrigins([]string{"*"}))
 
 	// Server
 	s := &http.Server{
 		Addr:         ":9090",
-		Handler:      sm,
+		Handler:      ch(sm),
 		IdleTimeout:  120 * time.Second,
 		ReadTimeout:  1 * time.Second,
 		WriteTimeout: 1 * time.Second,
